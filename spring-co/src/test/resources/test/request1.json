@@ -1,0 +1,18 @@
+{
+    "pager": {
+        "page": 1,
+        "size": 8
+    },
+    "projection": [],
+    "sorter": [
+        "lastModifiedDate,DESC"
+    ],
+    "criteria": {
+        "": true,
+        "cat,i": [
+            "MANAGE",
+            "RESOURCE",
+            "UNIFORM"
+        ]
+    }
+}

@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.spring.up.ipc.service";
+option java_outer_classname = "UpIpcService";
+
+import "zero.envelop.proto";
+import "zero.stream.proto";
+
+package io.spring.up.ipc.service;
+
+service ConsumeService {
+    // Server -> Client
+    rpc OutputCall (stream io.spring.up.ipc.model.StreamServerRequest) returns (stream io.spring.up.ipc.model.StreamServerResponse);
+}
+
+service ProduceService {
+    // Client -> Server
+    rpc InputCall (stream io.spring.up.ipc.model.StreamClientRequest) returns (stream io.spring.up.ipc.model.StreamClientResponse);
+}
+
+service UnityService {
+    // Direct: Client -> Server -> Client
+    rpc UnityCall (io.spring.up.ipc.model.IpcRequest) returns (io.spring.up.ipc.model.IpcResponse);
+}
+
+service DupliexService {
+    // Full: Client -> Server -> Client
+    rpc DupliexCall (stream io.spring.up.ipc.model.StreamClientRequest) returns (stream io.spring.up.ipc.model.StreamServerResponse);
+}

@@ -1,0 +1,8 @@
+tp:
+  ali-sms:
+    access_id:
+    access_secret:
+    sign_name: 虞浪
+    tpl:
+      key-login:
+      key-registry:

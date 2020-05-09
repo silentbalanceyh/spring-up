@@ -1,0 +1,3 @@
+code:
+- type: required
+  message: "企业号不可为空，请输入企业号！"

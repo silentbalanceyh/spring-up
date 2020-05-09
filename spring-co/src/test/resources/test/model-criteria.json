@@ -1,0 +1,15 @@
+{
+    "req1": {
+        "criteria": {
+            "type,=": "CERT"
+        },
+        "pager": {
+            "page": 1,
+            "size": 10
+        },
+        "projection": [],
+        "sorter": [
+            "lastModifiedDate,DESC"
+        ]
+    }
+}

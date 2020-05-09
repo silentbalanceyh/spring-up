@@ -1,0 +1,7 @@
+menuIds:
+- type: required
+  message: "请提供待办类型对应的ID"
+- type: array
+  message: "类型只能为数组，至少包含一个菜单关联ID"
+  config:
+    minlength: 1
